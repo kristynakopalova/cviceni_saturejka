@@ -3,10 +3,77 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
+    <style>
+      body {
+        background-color: lavenderblush;
+      }
+      #logo_saturejka {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      p {
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+      }
+      div {
+        background-color: white;
+      }
+      h1 {
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
+
+      .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+      }
+
+      .row::after {
+        content: '';
+        clear: both;
+        display: table;
+      }
+    </style>
   </head>
   <body>
-    Saturejka Přijďte se potěšit naši chutnou a originální kuchyní v příjemném a
-    milém prostředí.
+    <img id="logo_saturejka" src="img/logo.png" alt="Logo Saturejka" />
+    <p>
+      Přijďte se potěšit naši chutnou a originální kuchyní v příjemném a milém
+      prostředí.
+    </p>
+    <div>
+      <h1>Naše nabídka</h1>
+      <p>
+        Vybraná jídla z našeho jarního menu připravená našimi prvotřídními
+        šefkuchaři.
+      </p>
+      <div class="row">
+        <div class="column">
+          <img src="img/home1.jpg" alt="Home1" style="width: 100%" />
+        </div>
+        <div class="column">
+          <img src="img/home2.jpg" alt="Home2" style="width: 100%" />
+        </div>
+        <div class="column">
+          <img src="img/home3.jpg" alt="Home3" style="width: 100%" />
+        </div>
+      </div>
+    </div>
   </body>
 </html>
