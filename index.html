@@ -24,7 +24,6 @@
         margin-right: auto;
       }
       p {
-        text-align: center;
         font-family: 'Open Sans', sans-serif;
       }
       div {
@@ -34,45 +33,113 @@
         text-align: center;
         font-family: 'Playfair Display', serif;
       }
+      h2 {
+        font-family: 'Playfair Display', serif;
+      }
       * {
         box-sizing: border-box;
       }
-
-      .column {
-        float: left;
-        width: 33.33%;
-        padding: 5px;
-      }
-
+      /* row - Tato třída je využita pro zajištění "clearfix" efektu, který zamezuje problémům spojeným s plovoucími prvky */
       .row::after {
         content: '';
         clear: both;
         display: table;
       }
+      .column_33 {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+      }
+
+      .column_50 {
+        float: left;
+        width: 50%;
+        padding: 5px;
+      }
+      .zarovnani_na_stred {
+        text-align: center;
+      }
+      #losos_se_zeleninou {
+        float: left;
+      }
+      button {
+        background-color: lavenderblush;
+        border-color: lavenderblush;
+        border-style: none;
+        padding-block: 20px;
+        padding-inline: 20px;
+      }
     </style>
   </head>
   <body>
     <img id="logo_saturejka" src="img/logo.png" alt="Logo Saturejka" />
-    <p>
+    <p class="zarovnani_na_stred">
       Přijďte se potěšit naši chutnou a originální kuchyní v příjemném a milém
       prostředí.
     </p>
     <div>
       <h1>Naše nabídka</h1>
-      <p>
+      <p class="zarovnani_na_stred">
         Vybraná jídla z našeho jarního menu připravená našimi prvotřídními
         šefkuchaři.
       </p>
       <div class="row">
-        <div class="column">
+        <div class="column_33">
           <img src="img/home1.jpg" alt="Home1" style="width: 100%" />
         </div>
-        <div class="column">
+        <div class="column_33">
           <img src="img/home2.jpg" alt="Home2" style="width: 100%" />
         </div>
-        <div class="column">
+        <div class="column_33">
           <img src="img/home3.jpg" alt="Home3" style="width: 100%" />
         </div>
+      </div>
+      <div class="row">
+        <div class="column_50">
+          <p>
+            Architektonický skvost láká své hosty atmosférou ve stylu Grand Café
+            již od roku 1922 nejen unikátními keramickými dekoracemi. Kvalitní
+            servis, prvotřídní kuchyně a dostupné ceny v luxusním prostředí - to
+            je resaurace Saturejka.
+          </p>
+        </div>
+        <div class="column_50">
+          <p>
+            Saturejka není jen restaurace, ale také kavárna, která navazuje na
+            svou slávu z první republiky. Naše dorty jsou výjimečné svou chutí a
+            jsou vyrobeny z prvotřídních surovin. Dort si můžete vychutnat v
+            krásném prostředí našeho vnitrobloku nebo si jej odnést s sebou.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column_50">
+          <p>
+            Jedinečný kulinářský zážitek z jídla v naší restauraci je umocněn
+            prémiovým porcelánem značky Vilém & Švec. Klasická, elegantní a
+            přitom dokonale nadčasová kolekce vás nadchne stejně jako nás.
+            Těšíme se na vaši návštěvu!
+          </p>
+        </div>
+        <div class="column_50">
+          <p>
+            <br />
+            Saturejka a její privátní salonky jsou dokonalým místem pro setkání,
+            oslavy či firemní akce.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <img id="losos_se_zeleninou" src="img/dish1.jpg" alt="Dish1" />
+        <h2>Losos se zeleninou</h2>
+        <p>
+          Je libo lehčí večeře? Nač hledat, když ji pro vás máme už připravenou!
+          Vyzkoušejte pečeného lososa na bylinkách s dušenou jarní zeleninou a
+          bylinkovým máslem,. Veškeré ryby objednáváme čerstvé u prémiových a
+          ověřených dodavatelů.
+        </p>
+        <button>ZOBRAZIT MENU</button>
       </div>
     </div>
   </body>
